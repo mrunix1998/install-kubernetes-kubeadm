@@ -1,7 +1,7 @@
 [masters]
-dorkari1 ansible_host=192.168.119.104 ansible_user=root
+master ansible_host=192.168.119.104 ansible_user=root
 
 [workers]
-dorkari2 ansible_host=192.168.119.107 ansible_user=root
-dorkari3 ansible_host=192.168.119.223 ansible_user=root
-dorkari4 ansible_host=192.168.118.123 ansible_user=root
+worker1 ansible_host=192.168.119.107 ansible_user=root
+worker2 ansible_host=192.168.119.223 ansible_user=root
+worker3 ansible_host=192.168.118.123 ansible_user=root
