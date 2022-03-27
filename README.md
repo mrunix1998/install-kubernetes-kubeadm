@@ -142,3 +142,9 @@ Join nodes as workers run the following command :
 ```bash
 $ ansible-playbook -i hosts join-workers.yml
 ```
+
+### Enable bash completion in kubernetes 
+
+```bash
+$ echo 'source <(kubectl completion bash)' >>~/.bashrc
+```
