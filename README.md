@@ -1,10 +1,10 @@
 # Install-kubernetes-kubeadm
 
-![Visits Badge](https://badges.pufler.dev/visits/mrunix1998/docker-minio-cluster)
-![GitHub last commit](https://img.shields.io/github/last-commit/mrunix1998/docker-minio-cluster)
-[![GitHub issues](https://img.shields.io/github/issues/mrunix1998/docker-minio-cluster)](https://github.com/mrunix1998/docker-minio-cluster/issues)
-[![GitHub stars](https://img.shields.io/github/stars/mrunix1998/docker-minio-cluster)](https://github.com/mrunix1998/docker-minio-cluster/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/mrunix1998/docker-minio-cluster)](https://github.com/mrunix1998/docker-minio-cluster/network)
+![Visits Badge](https://badges.pufler.dev/visits/mrunix1998/install-kubernetes-kubeadm)
+![GitHub last commit](https://img.shields.io/github/last-commit/mrunix1998/install-kubernetes-kubeadm)
+[![GitHub issues](https://img.shields.io/github/issues/mrunix1998/install-kubernetes-kubeadm)](https://github.com/mrunix1998/install-kubernetes-kubeadm/issues)
+[![GitHub stars](https://img.shields.io/github/stars/mrunix1998/install-kubernetes-kubeadm)](https://github.com/mrunix1998/install-kubernetes-kubeadm/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/mrunix1998/install-kubernetes-kubeadm)](https://github.com/mrunix1998/install-kubernetes-kubeadm/network)
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](salehimohammad331@gmail.com)
 ![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)
