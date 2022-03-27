@@ -1,0 +1,63 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install dependencies
+      apt:
+        name: "{{item}}"
+        state: latest
+        update_cache: yes
+      loop:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - gnupg-agent
+        - software-properties-common
+    - name: Add signing key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+    - name: Add repository into sources list
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu focal stable
+        state: present
+    - name: Install docker
+      apt:
+        name: "{{item}}"
+        state: latest
+        update_cache: yes
+      loop:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+    - name: Starting docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+    - name: Creating a file with content
+      register: create_daemon_file
+      shell: |
+        cat > /etc/docker/daemon.json <<EOF
+        {
+          "exec-opts": ["native.cgroupdriver=systemd"],
+          "log-driver": "json-file",
+          "log-opts": {
+            "max-size": "100m"
+          },
+          "storage-driver": "overlay2"
+        }
+        EOF
+    - name: restart docker
+      register: show_status
+      service: 
+        name: docker 
+        state: restarted
+
+    - name: Debug
+      vars: 
+        msg: |
+            Create daemon json file: {{ create_daemon_file | to_nice_json }}
+            Show docker status: {{ show_status | to_nice_json }}
+      debug: 
+        msg: "{{ msg.split('\n') }}" 
