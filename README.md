@@ -119,6 +119,12 @@ For friendly work with kubernetes running cluster with docker interface
 $ ansible-playbook -i hosts docker.yml
 ```
 
+📌 **Note :** After you add kubernetes user and installed docker you should run the following command :
+
+```bash
+# usermod -aG docker <kubernetes_user>
+```
+
 ### Install kubernetes
 
 Installing kubernetes packages for initiate cluster :
